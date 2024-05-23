@@ -17,17 +17,19 @@ body {
 
 
 .navbar {
-    height : 5rem;
-    background-color: white;
+    height : 3.5rem;
 }
 
 .navbar-brand i {
-    color : #00ABE4;
     font-size : 2rem;
 }
 
 .nav-link {
     color : #222222 !important;
+}
+
+.bg-white-toggler {
+    background-color: white !important;
 }
 
 /* Footer */
