@@ -1,15 +1,6 @@
 <% layout("/layouts/boilerplate") %>
-<style>
-.bg-white-toggler {
-background-color: white;
-}
-</style>
 <body>
-
-    <!-- <form action="/listings/new" method="GET">
-        <button>Create New Listing</button>
-    </form> -->
-    <div class="row row-cols-lg-3 row-cols-md-3 row-cols-sm-1 mt-2">
+    <div class="row row-cols-lg-3 row-cols-md-3 row-cols-sm-1 mt-2 container">
         <%for(let listing of allListings) {%>
             <a href="/listings/<%=listing._id%>" class="listing-link">
                 <div class="card listing-card">
@@ -29,14 +20,7 @@ background-color: white;
             
               <%}%>
     </div>
-    <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const toggler = document.querySelector(".navbar-toggler");
-      toggler.addEventListener('click', function() {
-          toggler.classList.toggle("bg-white-toggler");
-      });
-  });
-  </script>
+    
     
 </body>
 
