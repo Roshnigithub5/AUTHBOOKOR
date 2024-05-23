@@ -30,6 +30,8 @@ main().then(()=>{
     console.log(err);
 });
 
+
+
 async function main() {
     await mongoose.connect(dbUrl);
 }
