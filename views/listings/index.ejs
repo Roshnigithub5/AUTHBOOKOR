@@ -1,6 +1,6 @@
 <% layout("/layouts/boilerplate") %>
 <body>
-    <div class="row row-cols-lg-3 row-cols-md-3 row-cols-sm-1 mt-2 container">
+    <div class="row row-cols-lg-3 row-cols-md-3 row-cols-sm-1 mt-2 container-fluid">
         <%for(let listing of allListings) {%>
             <a href="/listings/<%=listing._id%>" class="listing-link">
                 <div class="card listing-card">
