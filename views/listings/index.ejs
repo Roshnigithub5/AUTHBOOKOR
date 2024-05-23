@@ -9,7 +9,7 @@ background-color: white;
     <!-- <form action="/listings/new" method="GET">
         <button>Create New Listing</button>
     </form> -->
-    <div class="row row-cols-lg-3 row-cols-md-3 row-cols-sm-1 mt-2 container-fluid">
+    <div class="row row-cols-lg-3 row-cols-md-3 row-cols-sm-1 mt-2">
         <%for(let listing of allListings) {%>
             <a href="/listings/<%=listing._id%>" class="listing-link">
                 <div class="card listing-card">
