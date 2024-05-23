@@ -16,7 +16,7 @@
                   </p>
 
             </div>
-<% if(res.locals.currUser && res.locals.currUser._id.equals(listing.owner._id)) { %>
+<% if(currUser && currUser._id.equals(listing.owner._id)) { %>
             <div class="row mt-2 btns">
             <div class="col-3"><form action="/listings/<%=listing._id%>/edit" method="GET">
                 <button class="btn btn-primary mb-1"><i class="fa-regular fa-pen-to-square"></i>&nbsp;&nbsp;Edit</button>
@@ -27,7 +27,7 @@
             </div>
 <% } %>
           </div>
-        <% if(res.locals.currUser) { %>
+        <% if(currUser) { %>
         <div class="col-8 offset-3 mt-2">
             <hr>
             <h3>Leave a review</h3>
@@ -73,7 +73,7 @@
                         <p class="starability-result card-text" data-rating="<%=review.rating%>"></p>
                         <p class="card-text"><%=review.comment%></p>
                     </div>
-                    <% if(res.locals.currUser && res.locals.currUser._id.equals(listing.owner._id)) { %>
+                    <% if(currUser && currUser._id.equals(listing.owner._id)) { %>
                     <form action="/listings/<%=listing._id%>/reviews/<%=review._id%>?_method=DELETE" method="POST">
                         <button class="btn btn-sm btn-outline-dark mb-1 rvw-del-btn">Delete</button>
                     </form>
