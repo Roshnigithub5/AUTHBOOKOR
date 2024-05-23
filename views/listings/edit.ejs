@@ -1,0 +1,52 @@
+<% layout("/layouts/boilerplate") %>
+<body>
+    <div class="row">
+        <div class="col-8 offset-2 mt-3">
+            <h3>Edit this listing</h3>
+    <form method="POST" action="/listings/<%=listing._id%>?_method=PUT" novalidate class="needs-validation" enctype="multipart/form-data">
+        <div class="mb-3">
+            <label for="title" class="form-label">
+                Title : 
+            </label>
+                <input type="text" value="<%=listing.title%>" name="listing[title]" id="title" class="form-control" required>
+                <div class="valid-feedback">Looks Good!</div>
+                <div class="invalid-feedback">Enter a proper title!</div>
+        </div>
+        
+        <div class="mb-3">
+            <label for="author" class="form-label">
+                Author : 
+            </label>
+                <input type="text" value="<%=listing.author%>" name="listing[author]" id="author" class="form-control" required>
+                <div class="valid-feedback">Perfect!</div>
+                <div class="invalid-feedback">Enter a valid author name!</div>
+        </div>
+        
+        <div class="mb-3">
+            <label for="price" class="form-label">
+                Price : 
+            </label>
+                <input type="text" value="<%=listing.price%>" name="listing[price]" id="price" class="form-control" required>
+                <div class="valid-feedback">Looks Nice!</div>
+                <div class="invalid-feedback">Price must be entered!</div>
+        </div>
+
+        <div class="mb-3">
+            Uploaded Image : <br> 
+            <img src="<%=orgImgUrl%>">
+        </div>
+        
+        <div class="mb-3">
+            <label for="link" class="form-label">
+                Upload New Image :  
+            </label>
+                <input type="file" name="listing[link]" id="link" class="form-control">
+                <div class="invalid-feedback">Enter a valid link!</div>
+        </div>
+        
+        <button class="btn btn-primary mb-3">Edit</button>
+    </form>
+        </div>
+    </div>
+    
+</body>
