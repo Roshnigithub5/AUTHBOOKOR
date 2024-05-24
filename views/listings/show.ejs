@@ -65,10 +65,10 @@
             <div class="col-8 offset-2 mt-2">
 
             <h4>All Reviews</h4>
-        <div class="mb-3 row">
+        <div class="mb-3 row m-1 review-main">
             <% for(review of listing.reviews) { %>
-                <div class="card col-6 col-sm-8 col-md-4 col-lg-4 ms-2 mb-2 mt-1">
-                    <div class="card-body p-1">
+                <div class="card col-xs-4 col-sm-12 col-md-12 col-lg-5 review-lg">
+                    <div class="card-body p-1 review-card">
                         <div class="card-title"><h5>@<%=review.reviewAuthor.username%></h5></div>
                         <p class="starability-result card-text" data-rating="<%=review.rating%>"></p>
                         <p class="card-text"><%=review.comment%></p>
